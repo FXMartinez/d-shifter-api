@@ -51,4 +51,8 @@ game5 = Game.create({
     rating: 10
 })
 
+comment1 = Comment.create({content: 'eh eh eh, brrrrrrr', user_id: 2, game_id: 1})
+follow1 = Follow.create({user_id: 2, game_id: 1})
+
+
 puts 'created seed data'

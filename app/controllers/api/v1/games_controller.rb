@@ -5,6 +5,15 @@ class Api::V1::GamesController < ApplicationController
         render json: game
     end
 
+    def show
+        game = Game.find(params[:id])
+        render json: 
+            {  
+            follows: game.follows, 
+            comments: game.comments 
+            }
+    end
+
     def index
         games = Game.all
         render json: games

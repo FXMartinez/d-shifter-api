@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 2019_12_12_182056) do
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["game_id"], name: "index_follows_on_game_id"
+    t.index ["user_id"], name: "index_follows_on_user_id"
   end
 
   create_table "games", force: :cascade do |t|
