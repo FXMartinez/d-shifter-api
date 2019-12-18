@@ -9,11 +9,11 @@
 puts 'destroying seed data'
 
 
-# user1 = User.create({username: 'Flexington'})
-user2 = User.create({username: 'BadBunny'})
-user3 = User.create({username: 'Memorexx'})
-user4 = User.create({username: 'Arev'})
-user5 = User.create({username: 'Tooshort'})
+user1 = User.create({username: 'Flexington', password: '1234'})
+user2 = User.create({username: 'BadBunny', password: 'queloque'})
+user3 = User.create({username: 'Memorexx', password: 'afro'})
+user4 = User.create({username: 'Arev', password: 'fam'})
+user5 = User.create({username: 'Tooshort', password: 'iwishiwastaller'})
 
 game1 = Game.create({
     name: 'Jedi Knight 2: Jedi Outcast',
@@ -52,7 +52,14 @@ game5 = Game.create({
 })
 
 comment1 = Comment.create({content: 'eh eh eh, brrrrrrr', user_id: 2, game_id: 1})
-follow1 = Follow.create({user_id: 2, game_id: 1})
+comment2 = Comment.create({content: 'the world will never see another crazy mother fucker like you'})
+comment3 = Comment.create({content: 'the world will never know another man as amazing as you'})
+comment4 = Comment.create({content: 'I will keep your soul alive, if I cant have you here'})
+
+follow1 = Follow.create({user_id: 3, game_id: 1})
+follow2 = Follow.create({user_id: 2, game_id: 4})
+follow3 = Follow.create({user_id: 1, game_id: 2})
+follow4 = Follow.create({user_id: 1, game_id: 3})
 
 
 puts 'created seed data'
