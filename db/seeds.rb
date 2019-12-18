@@ -52,9 +52,9 @@ game5 = Game.create({
 })
 
 comment1 = Comment.create({content: 'eh eh eh, brrrrrrr', user_id: 2, game_id: 1})
-comment2 = Comment.create({content: 'the world will never see another crazy mother fucker like you'})
-comment3 = Comment.create({content: 'the world will never know another man as amazing as you'})
-comment4 = Comment.create({content: 'I will keep your soul alive, if I cant have you here'})
+comment2 = Comment.create({content: 'the world will never see another crazy mother fucker like you', user_id: 1, game_id: 1})
+comment3 = Comment.create({content: 'the world will never know another man as amazing as you', user_id: 1, game_id: 1})
+comment4 = Comment.create({content: 'I will keep your soul alive, if I cant have you here', user_id: 1, game_id: 1})
 
 follow1 = Follow.create({user_id: 3, game_id: 1})
 follow2 = Follow.create({user_id: 2, game_id: 4})
