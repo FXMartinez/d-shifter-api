@@ -7,15 +7,15 @@ class Api::V1::CommentsController < ApplicationController
 
     def show
         comment = Comment.find(params[:id])
-        render json: 
-            {  
-            user: comment.user, 
-            game: comment.game 
-            }
+        render json: {  
+                comment: comment,
+                user: comment.user, 
+                game: comment.game 
+                }
     end
 
-    def new
-        comment = Comment.create(content: params[:content])
+    def create
+        comment = Comment.create({content: params[:content], user_id: params[:user_id], game_id: params[:game_id]})
         render json: comment
     end
 

@@ -1,17 +1,17 @@
 class Api::V1::GamesController < ApplicationController
 
-    def new
+    def create
         game = Game.create
         render json: game
     end
 
     def show
         game = Game.find(params[:id])
-        render json: 
-            {  
-            follows: game.follows, 
-            comments: game.comments 
-            }
+        render json: {  
+                game: game,
+                follows: game.follows, 
+                comments: game.comments 
+                }
     end
 
     def index
